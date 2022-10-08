@@ -72,6 +72,8 @@ ZSH_THEME="codespaces"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(asdf docker dotenv git git-prompt helm kubectl gpg-agent fasd zsh-autosuggestions thefuck)
 
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
