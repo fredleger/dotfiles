@@ -34,5 +34,5 @@ terragrunt 0.38.9
 tflint 0.41.0
 tfsec 1.28.0
 tfupdate 0.6.7
-velero 1.9.1datree 1.6.37
+velero 1.9.1
 datree 1.6.37
