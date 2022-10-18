@@ -70,7 +70,7 @@ ZSH_THEME="codespaces"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(asdf docker dotenv git git-prompt helm kubectl gpg-agent fasd zsh-autosuggestions thefuck)
+plugins=(asdf docker dotenv git git-prompt helm kubectl gpg-agent fasd zsh-autosuggestions thefuck zsh-fzf-history-search)
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
