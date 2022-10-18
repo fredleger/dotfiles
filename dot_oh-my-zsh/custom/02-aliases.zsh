@@ -34,3 +34,6 @@ alias zz='z'
 
 alias less='bat'
 alias more='bat'
+
+alias intel="$env /usr/bin/arch -x86_64 /bin/zsh --login"
+alias arm="$env /usr/bin/arch -xarm64 /bin/zsh --login"
