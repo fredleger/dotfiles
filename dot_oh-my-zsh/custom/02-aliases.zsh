@@ -29,6 +29,9 @@ function zsh-load-plugin() {
   source $ZSH/plugins/"$1"/"$1".plugin.zsh
 }
 
+# thefuck
+eval $(thefuck --alias)
+
 alias j='z'
 alias zz='z'
 
@@ -36,4 +39,4 @@ alias less='bat'
 alias more='bat'
 
 alias intel="$env /usr/bin/arch -x86_64 /bin/zsh --login"
-alias arm="$env /usr/bin/arch -xarm64 /bin/zsh --login"
+alias arm="$env /usr/bin/arch -arm64 /bin/zsh --login"
