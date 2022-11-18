@@ -1,4 +1,4 @@
 #!/bin/bash
 
 set -eux -o pipefail
-pip install ntfy ntfy[telegram]
+pip3 install ntfy ntfy[telegram]
