@@ -3,7 +3,6 @@ act 0.2.17
 argocd 2.4.12
 aws-iam-authenticator 0.5.9
 awscli 2.8.1
-# bat 0.22.1
 boundary 0.9.0
 checkov 2.1.256
 dagger 0.2.20
@@ -36,3 +35,4 @@ tfupdate 0.6.7
 velero 1.9.1
 datree 1.6.37
 kubent 0.6.0
+fd 8.5.3
