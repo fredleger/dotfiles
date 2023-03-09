@@ -8,15 +8,11 @@ alias lt='ls --tree'
 
 # editors
 alias vi='vim'
-alias vim='nvim'
 alias code="open -a 'Visual Studio Code'"
 
 # ssh
 alias sshq='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
 alias scpq='scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
-
-# misc
-alias subl="open -a '/Applications/Sublime Text.app/Contents/MacOS/sublime_text'"
 
 # portainer
 function portainer-up() {
@@ -38,5 +34,7 @@ alias zz='z'
 alias less='bat'
 alias more='bat'
 
-alias intel="$env /usr/bin/arch -x86_64 /bin/zsh --login"
-alias arm="$env /usr/bin/arch -arm64 /bin/zsh --login"
+if [ "$(uname)" = "Darwin" ]; then
+  alias intel="$env /usr/bin/arch -x86_64 /bin/zsh --login"
+  alias arm="$env /usr/bin/arch -arm64 /bin/zsh --login"
+fi
