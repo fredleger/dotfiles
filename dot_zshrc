@@ -79,6 +79,7 @@ plugins=(
   gpg-agent
   helm
   kubectl
+  ssh-agent
   thefuck
   zsh-autosuggestions
   zsh-fzf-history-search

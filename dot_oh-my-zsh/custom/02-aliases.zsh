@@ -8,7 +8,6 @@ alias lt='ls --tree'
 
 # editors
 alias vi='vim'
-alias code="open -a 'Visual Studio Code'"
 
 # ssh
 alias sshq='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
