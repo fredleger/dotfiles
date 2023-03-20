@@ -71,18 +71,19 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  asdf
-  docker
-  dotenv
-  fasd
-  git
-  gpg-agent
-  helm
-  kubectl
-  ssh-agent
-  thefuck
-  zsh-autosuggestions
-  zsh-fzf-history-search
+    asdf
+    docker
+    dotenv
+    fasd
+    git
+    gpg-agent
+    helm
+    kubectl
+    ssh-agent
+    thefuck
+    zsh-autosuggestions
+    zsh-fzf-history-search
+    z
 )
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
@@ -118,3 +119,4 @@ DISABLE_AUTO_UPDATE=true
 DISABLE_UPDATE_PROMPT=true
 
 unsetopt PROMPT_SP
+
