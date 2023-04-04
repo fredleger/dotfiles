@@ -1,4 +1,4 @@
-1password-cli 2.7.1
+1password-cli 2.16.1
 act 0.2.17
 argocd 2.6.3
 aws-iam-authenticator 0.5.9
@@ -37,3 +37,4 @@ datree 1.6.37
 kubent 0.7.0
 fd 8.5.3
 dive 0.10.0
+helm-ct 3.8.0
