@@ -12,8 +12,8 @@ alias vim='nvim'
 alias code="open -a 'Visual Studio Code'"
 
 # ssh
-alias sshq='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
-alias scpq='scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
+alias sshq='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR'
+alias scpq='scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR'
 
 # misc
 alias subl="open -a '/Applications/Sublime Text.app/Contents/MacOS/sublime_text'"

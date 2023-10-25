@@ -65,6 +65,9 @@ ZSH_THEME="robbyrussell"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+DISABLE_AUTO_UPDATE=true
+DISABLE_UPDATE_PROMPT=true
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -79,6 +82,7 @@ plugins=(
     gpg-agent
     helm
     kubectl
+    pass
     thefuck
     zsh-autosuggestions
     zsh-fzf-history-search
@@ -86,6 +90,8 @@ plugins=(
 )
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+fpath+=$(brew --prefix)/share/zsh-completions
+fpath+=$(brew --prefix)/share/zsh/site-functions
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,25 +120,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-DISABLE_AUTO_UPDATE=true
-DISABLE_UPDATE_PROMPT=true
 
 unsetopt PROMPT_SP
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/frederic/Documents/_work/00_veille/42_stable_diffusion/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/frederic/Documents/_work/00_veille/42_stable_diffusion/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/Users/frederic/Documents/_work/00_veille/42_stable_diffusion/miniforge3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/frederic/Documents/_work/00_veille/42_stable_diffusion/miniforge3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

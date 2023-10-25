@@ -1,3 +1,6 @@
 #!/bin/zsh
 
-export PATH=$PATH:$HOME/bin
+PATH="$HOME/bin:$PATH"
+PATH="$(brew --prefix)/mysql-client/bin:$PATH"
+
+export PATH
