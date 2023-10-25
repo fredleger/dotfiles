@@ -3,7 +3,9 @@ export FZF_COMPLETION_OPTS="--preview 'bat --color=always --style=numbers --line
 _fzf_complete_pass() {
   ARGS="$@"
   _fzf_complete '' "$@" < <(
-      command find ~/.password-store/ -name "*.gpg" | sed -r 's,(.*)\.password-store/(.*)\.gpg,\2,'
+      PASSWORD_STORE_DIR="${PASSWORD_STORE_DIR:-$HOME/.password-store}"
+      cd "$PASSWORD_STORE_DIR" || return
+      command find . -type f -name "*.gpg" | sed -r 's,\./(.*)\.gpg,\1,'
   )
 }
 
