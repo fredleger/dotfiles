@@ -76,7 +76,7 @@ DISABLE_UPDATE_PROMPT=true
 plugins=(
     asdf
     docker
-    dotenv
+    direnv
     fasd
     git
     gpg-agent

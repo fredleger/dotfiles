@@ -29,6 +29,15 @@ function zsh-load-plugin() {
   source $ZSH/plugins/"$1"/"$1".plugin.zsh
 }
 
+function comeon() {
+  if [ -e "${1}" ]; then
+    mv "${1}" ./
+    echo "moved ${1} to $(pwd)"
+  else
+    echo "no such file or directory: ${1}"
+  fi
+}
+
 # thefuck
 eval $(thefuck --alias)
 

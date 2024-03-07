@@ -2,7 +2,7 @@
 act 0.2.17
 argocd 2.7.2
 aws-iam-authenticator 0.5.9
-awscli 2.8.1
+awscli 2.13.21
 boundary 0.9.0
 checkov 2.3.294
 dagger 0.6.1
@@ -34,10 +34,12 @@ tfsec 1.28.0
 tfupdate 0.7.2
 velero 1.9.1
 datree 1.6.37
-kubent 0.7.0
+kubent 0.7.1
 fd 8.5.3
 dive 0.10.0
 helm-ct 3.8.0
 cosign 2.0.2
 istioctl 1.18.1
 yarn 1.22.19
+werf 1.2.267
+lefthook 1.6.1

@@ -142,9 +142,9 @@ _z() {
         local cd
         cd="$( < <( _z_dirs ) awk -v t="$(date +%s)" -v list="$list" -v typ="$typ" -v q="$fnd" -F"|" '
             function frecent(rank, time) {
-              # relate frequency and time
-              dx = t - time
-              return int(10000 * rank * (3.75/((0.0001 * dx + 1) + 0.25)))
+                # relate frequency and time
+                dx = t - time
+                return int(10000 * rank * (3.75/((0.0001 * dx + 1) + 0.25)))
             }
             function output(matches, best_match, common) {
                 # list or return the desired directory
@@ -211,11 +211,11 @@ _z() {
         ')"
 
         if [ "$?" -eq 0 ]; then
-          if [ "$cd" ]; then
-            if [ "$echo" ]; then echo "$cd"; else builtin cd "$cd"; fi
-          fi
+            if [ "$cd" ]; then
+                if [ "$echo" ]; then echo "$cd"; else builtin cd "$cd"; fi
+            fi
         else
-          return $?
+            return $?
         fi
     fi
 }

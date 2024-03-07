@@ -14,6 +14,26 @@ fi
 export KUBE_PS1_ENABLED=false
 export PROMPT='$(kube_ps1)'$PROMPT
 
+function kubeps1 {
+  case $1 in
+    on)
+      KUBE_PS1_ENABLED=on
+      OLDPROMPT=$PROMPT
+      PROMPT="'$(kube_ps1)'$PROMPT"
+      export KUBE_PS1_ENABLED PROMPT OLDPROMPT
+      ;;
+    off)
+      KUBE_PS1_ENABLED=off
+      PS1=$OLDPROMPT
+      export KUBE_PS1_ENABLED PS1
+      ;;
+    *)
+      echo "usage: kubeps1 (on|off)"
+      exit 0
+      ;;
+  esac
+}
+
 # krew
 export PATH="$PATH:${KREW_ROOT:-$HOME/.krew}/bin"
 
