@@ -19,13 +19,14 @@ function kubeps1 {
     on)
       KUBE_PS1_ENABLED=on
       OLDPROMPT=$PROMPT
-      PROMPT="'$(kube_ps1)'$PROMPT"
+      PROMPT="$(kube_ps1) $PROMPT"
       export KUBE_PS1_ENABLED PROMPT OLDPROMPT
       ;;
     off)
       KUBE_PS1_ENABLED=off
       PS1=$OLDPROMPT
       export KUBE_PS1_ENABLED PS1
+      unset RPROMPT OLDPROMPT
       ;;
     *)
       echo "usage: kubeps1 (on|off)"

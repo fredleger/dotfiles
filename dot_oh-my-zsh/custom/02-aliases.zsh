@@ -1,22 +1,14 @@
 #!/bin/zsh
 
 # ls
-alias l='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias lt='ls --tree'
-
-# editors
-alias vi='vim'
-alias vim='nvim'
-alias code="open -a 'Visual Studio Code'"
+# alias l='ls -l'
+# alias la='ls -a'
+# alias lla='ls -la'
+# alias lt='ls --tree'
 
 # ssh
 alias sshq='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR'
 alias scpq='scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR'
-
-# misc
-alias subl="open -a '/Applications/Sublime Text.app/Contents/MacOS/sublime_text'"
 
 # portainer
 function portainer-up() {
@@ -49,3 +41,10 @@ alias more='bat'
 
 alias intel="$env /usr/bin/arch -x86_64 /bin/zsh --login"
 alias arm="$env /usr/bin/arch -arm64 /bin/zsh --login"
+
+# some nice apps
+alias vi='vim'
+alias vim='nvim'
+alias meld='meld-wrapper'
+alias subl="open -a '/Applications/Sublime Text.app/Contents/MacOS/sublime_text'"
+alias code="open -a 'Visual Studio Code'"
