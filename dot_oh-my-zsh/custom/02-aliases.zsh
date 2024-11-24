@@ -30,9 +30,6 @@ function comeon() {
   fi
 }
 
-# thefuck
-eval $(thefuck --alias)
-
 alias j='z'
 alias zz='z'
 

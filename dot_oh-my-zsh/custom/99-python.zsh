@@ -1,3 +1,5 @@
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=""
-export VIRTUALENVWRAPPER_PYTHON=`which python3`
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"

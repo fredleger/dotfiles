@@ -7,12 +7,20 @@ complete -o default -F __start_kubectl ks
 
 # kube-ps1
 if [ "$(uname -s)" = "Darwin" ]; then
-  source $(brew --prefix)/opt/kube-ps1/share/kube-ps1.sh
+  KUBE_PS1_FILE="$(brew --prefix)/opt/kube-ps1/share/kube-ps1.sh"
 else
-  source /usr/share/kube-ps1/kube-ps1.sh
+  KUBE_PS1_FILE="/usr/share/kube-ps1/kube-ps1.sh"
 fi
-export KUBE_PS1_ENABLED=false
-export PROMPT='$(kube_ps1)'$PROMPT
+
+case "${TERM_PROGRAM}" in
+  OpenLens)
+    ;;
+  *)
+    source $KUBE_PS1_FILE
+    export PROMPT='$(kube_ps1)'$PROMPT
+    export KUBE_PS1_ENABLED=false
+    ;;
+esac
 
 function kubeps1 {
   case $1 in
